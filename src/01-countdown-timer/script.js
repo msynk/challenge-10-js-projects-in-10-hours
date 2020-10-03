@@ -10,9 +10,9 @@ function countdown() {
         minutes = Math.floor((diff - days * 3600 * 24 - hours * 3600) / 60),
         seconds = Math.floor(diff - days * 3600 * 24 - hours * 3600 - minutes * 60);
     bodyCtx.days.textContent = days;
-    bodyCtx.hours.textContent = hours;
-    bodyCtx.minutes.textContent = minutes;
-    bodyCtx.seconds.textContent = seconds;
+    bodyCtx.hours.textContent = ('0' + hours).substr(-2);
+    bodyCtx.minutes.textContent = ('0' + minutes).substr(-2);
+    bodyCtx.seconds.textContent = ('0' + seconds).substr(-2);
 }
 
 
